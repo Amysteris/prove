@@ -1,0 +1,125 @@
+using System; 
+
+//Del 1//
+    //1.//
+class Program
+{
+    static void Main(string[] args)
+    {
+        int n = 12;
+        if (n > 10)
+        {
+            Console.WriteLine("The number is Large.");
+        }
+        //2.//
+        for (int i = 1; i < 6; i++)
+        {
+            Console.WriteLine(i);
+        }
+        //3.//
+        
+        {
+            SayHello(); 
+        }
+
+        
+        static void SayHello()
+        {
+            Console.WriteLine("Hello, world!");
+        }
+        //4.//
+        string[] names = new string[3];
+        names[0] = "Domas";
+        names[1] = "Tomas";
+        names[2] = "Arthur";
+
+        for (int i = 0; i < names.Length; i++)
+        {
+            Console.WriteLine(names[i]);
+        }
+        
+        //Del 2//
+        //5.//
+        Console.WriteLine("Enter number:");
+        int number = int.Parse(Console.ReadLine());
+        
+        if (number > 0)
+        {
+            Console.WriteLine("The number is positive.");
+        }
+        else if (number == 0)
+        {
+            Console.WriteLine("The number is zero.");
+        }
+        else
+        {
+            Console.WriteLine("The number is negative.");
+        }
+        
+        //6.//
+        int d = 5;
+        while (d > 0)
+        {
+            Console.WriteLine(d);
+            d--;
+        }
+        //7.//
+        int tall = 6;
+        int result = Square(tall);
+        Console.WriteLine($"The square of {tall} is {result}");
+        static int Square(int n)
+        {
+            return n * n;
+        }
+        
+        //8.//
+        for (int i = 0; i <= 10; i = i + 2)
+        {
+            Console.WriteLine(i);
+        }
+        
+        //9.//
+        int[] numbers = { 3, 7, 2, 9 };
+        int sum = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            sum += numbers[i];
+        }
+        Console.WriteLine($"The sum of all the numbers is {sum}");
+        
+        //Del 3//
+        //10.//
+
+        for (int i = 0; i < 2; i++) 
+        {
+            for (int j = 0; j < 2; j++) 
+            {
+                Console.WriteLine($"{i}{j}");
+            }
+            Console.WriteLine(); 
+        }
+        //11.//
+        
+        {
+            Console.WriteLine(CheckNumber(10));   
+            Console.WriteLine(CheckNumber(-5));   
+            Console.WriteLine(CheckNumber(0));    
+        }
+
+        static string CheckNumber(int n)
+        {
+            if (n > 0)
+            {
+                return "Positive";
+            }
+            else if (n < 0)
+            {
+                return "Negative";
+            }
+            else
+            {
+                return "Zero";
+            }
+        }
+    }
+}
